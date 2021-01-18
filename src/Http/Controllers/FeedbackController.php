@@ -51,6 +51,7 @@ class FeedbackController extends Controller
     {
         return [
             'url' => $request->server('HTTP_REFERER'),
+            'screens' => $request->input('screens'),
             'language' => $request->getPreferredLanguage(),
             'agent' => $request->server('HTTP_USER_AGENT'),
             'viewport' => $request->viewport,
